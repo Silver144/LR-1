@@ -1,14 +1,14 @@
 #include "analyzer.h"
 
-std::stack<int> _status;
-std::stack<char> _symbol;
-
-std::set<char> _terminator;
-std::set<char> _non_terminator;
-
-std::vector<std::pair<char, std::string>> generator;
-
-std::map<status_index, action, lis> _state_table;
+//std::stack<int> _status;
+//std::stack<char> _symbol;
+//
+//std::set<char> _terminator;
+//std::set<char> _non_terminator;
+//
+//std::vector<std::pair<char, std::string>> generator;
+//
+//std::map<status_index, action, lis> _state_table;
 
 action _get_action(int _status, char _symbol)
 {
@@ -47,6 +47,7 @@ void analyze(const std::string& _sentense)
 			_action = _get_action(_status.top(), _sentense[_ip]);
 		}
 	}
+	return;
 }
 
 void _init_generator()

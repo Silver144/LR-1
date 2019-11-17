@@ -43,17 +43,18 @@ template <> constexpr bool _t_less<status_index>(const status_index& _Tx, const 
 	return _Tx._status < _Ty._status ? true : _Tx._status == _Ty._status ?
 		_Tx._symbol < _Ty._symbol ? true : false : false;
 }
+
 using lis = std::integral_constant<decltype(&_t_less<status_index>), &_t_less<status_index>>;
 
-extern std::stack<int> _status;
-extern std::stack<char> _symbol;
+inline std::stack<int> _status;
+inline std::stack<char> _symbol;
 
-extern std::set<char> _terminator;
-extern std::set<char> _non_terminator;
+inline std::set<char> _terminator;
+inline std::set<char> _non_terminator;
 
-extern std::vector<std::pair<char, std::string>> generator;
+inline std::vector<std::pair<char, std::string>> generator;
 
-extern std::map<status_index, action, lis> _state_table;
+inline std::map<status_index, action, lis> _state_table;
 
 action _get_action(int _status, char _symbol);
 void analyze(const std::string& _sentense);

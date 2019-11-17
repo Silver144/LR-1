@@ -4,7 +4,7 @@ int main()
 {
 	utils::init();
 
-	std::string _input;
+	std::string _input("(n+n)$");
 	analyze(_input);
 	return 0;
 }

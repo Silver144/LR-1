@@ -58,4 +58,4 @@ extern std::map<status_index, action, lis> _state_table;
 action _get_action(int _status, char _symbol);
 void analyze(const std::string& _sentense);
 
-void _init_table();
+
